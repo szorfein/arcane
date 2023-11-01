@@ -1,10 +1,6 @@
 # arcane
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+A site build with Vue.js and Zola about code/computer/linux and hack deployed at https://c-arcane.surge.sh
 
 ## Customize configuration
 
@@ -22,8 +18,19 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile and Minify for Production and Deploy
 
 ```sh
 npm run build
+../node_modules/.bin/surge ./dist/
 ```
+
+To force https
+
+```sh
+../node_modules/.bin/surge ./dist/ --domain https://c-arcane.surge.sh
+```
+
+### Deployed
+
+On [surge](https://surge.sh/).  [example](https://github.com/yavisht/deploy-via-surge.sh-github-action-template/tree/master)
