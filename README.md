@@ -1,6 +1,6 @@
 # arcane
 
-This template should help get you started developing with Vue 3 in Vite.
+A site build with Vue.js and Zola about code/computer/linux and hack deployed at https://c-arcane.surge.sh
 
 ## Customize configuration
 
@@ -33,4 +33,4 @@ To force https
 
 ### Deployed
 
-Site deployed at: https://c-arcane.surge.sh/
+On [surge](https://surge.sh/).  [example](https://github.com/yavisht/deploy-via-surge.sh-github-action-template/tree/master)
