@@ -22,9 +22,13 @@ npm run dev
 
 ```sh
 npm run build
-cd dist
-../node_modules/.bin/surge
-../node_modules/.bin/surge --domain https://c-arcane.surge.sh
+../node_modules/.bin/surge ./dist/
+```
+
+To force https
+
+```sh
+../node_modules/.bin/surge ./dist/ --domain https://c-arcane.surge.sh
 ```
 
 ### Deployed
