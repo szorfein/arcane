@@ -16,6 +16,11 @@ const router = createRouter({
       component: PostsView
     },
     {
+      path: '/post/:title',
+      name: 'show-post',
+      component: () => import('../components/PostShow.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

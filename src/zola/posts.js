@@ -2,11 +2,11 @@ import { reactive } from 'vue';
 
 export const posts = reactive([
   {
-    id: 1,
+    slug: "quickemu",
     title: "Use Quickemu",
   },
   {
-    id: 2,
+    slug: "repo-guru",
     title: "GURU repo for Gentoo"
   }
 ])
