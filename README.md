@@ -1,6 +1,6 @@
 # arcane
 
-A site build with Vue.js and Zola about code/computer/linux and hack deployed at https://c-arcane.surge.sh
+A site build with Vue.js and Zola about code/linux/hack deployed at https://c-arcane.surge.sh
 
 ## Customize configuration
 
@@ -22,13 +22,13 @@ npm run dev
 
 ```sh
 npm run build
-../node_modules/.bin/surge ./dist/
+./node_modules/.bin/surge ./dist/
 ```
 
 To force https
 
 ```sh
-../node_modules/.bin/surge ./dist/ --domain https://c-arcane.surge.sh
+./node_modules/.bin/surge ./dist/ --domain https://c-arcane.surge.sh
 ```
 
 ### Deployed
