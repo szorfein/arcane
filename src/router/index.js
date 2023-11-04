@@ -18,7 +18,8 @@ const router = createRouter({
     {
       path: '/post/:title',
       name: 'show-post',
-      component: () => import('../components/PostShow.vue')
+      component: () => import('../components/PostShow.vue'),
+      props: true,
     },
     {
       path: '/about',
