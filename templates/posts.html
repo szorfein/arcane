@@ -1,0 +1,11 @@
+import { reactive } from 'vue';
+{% set section = get_section(path="linux/_index.md") %}
+export const posts = reactive([
+{% for page in section.pages %}
+{
+  slug: "{{ page.title | slugify }}",
+  title: "{{ page.title }}",
+  content: `{{ page.content | linebreaksbr | safe }}`,
+},
+{% endfor %}
+])

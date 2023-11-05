@@ -1,7 +1,7 @@
 <script setup>
  import { computed } from 'vue';
 // import { useRoute } from 'vue-router';
- import { posts } from '@/zola/posts.js'
+ import { posts } from '@/zola/posts_linux.js'
 
  const props = defineProps({
      title: String
@@ -29,12 +29,15 @@
      */
      return post && post.value.title
  })
+ const post_content = computed(() => {
+     return post && post.value.content
+ })
 </script>
 
 <template>
-    <h1>{{ post }}</h1>
     <div v-if="post">
         <h1>{{ post_title }}</h1>
+        <div v-html="post_content"></div>
     </div>
     <div v-else>No post found {{ title }}</div>
 </template>

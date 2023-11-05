@@ -15,12 +15,14 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
+zola build
 npm run dev
 ```
 
 ### Compile and Minify for Production and Deploy
 
 ```sh
+zola build
 npm run build
 ./node_modules/.bin/surge ./dist/
 ```
