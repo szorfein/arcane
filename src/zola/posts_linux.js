@@ -1,1 +1,0 @@
-../../zola/linux/index.html
