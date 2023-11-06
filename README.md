@@ -1,6 +1,6 @@
 # arcane
 
-A site build with Vue.js and Zola about code/linux/hack deployed at https://c-arcane.surge.sh
+A static site build with [Vue.js](https://vuejs.org/) and [Zola](https://www.getzola.org/) about code/linux/hack deployed at https://c-arcane.surge.sh
 
 ## Customize configuration
 
@@ -15,12 +15,14 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
+./zola-script.sh
 npm run dev
 ```
 
 ### Compile and Minify for Production and Deploy
 
 ```sh
+./zola-script.sh
 npm run build
 mv dist/index.html dist/200.html # specific to surge.sh
 ./node_modules/.bin/surge dist

@@ -6,5 +6,5 @@
 </template>
 
 <script setup>
- import { posts } from '@/zola/posts.js'
+ import { posts } from '@/zola/posts_linux.js'
 </script>
