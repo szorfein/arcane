@@ -1,6 +1,8 @@
 # arcane
 
-A site build with Vue.js and Zola about code/linux/hack deployed at https://c-arcane.surge.sh
+A static site build with [Vue.js](https://vuejs.org/) and [Zola](https://www.getzola.org/) about code/linux/hack deployed at https://c-arcane.surge.sh
+
+Also add [vuetify](https://vuetifyjs.com/) for now instead of [bootstrap](https://getbootstrap.com/).
 
 ## Customize configuration
 
@@ -15,6 +17,7 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
+./zola-script.sh
 npm run dev
 ```
 
@@ -22,15 +25,18 @@ npm run dev
 
 ```sh
 npm run build
-./node_modules/.bin/surge ./dist/
+mv dist/index.html dist/200.html # specific to surge.sh
+./node_modules/.bin/surge dist
 ```
 
 To force https
 
 ```sh
-./node_modules/.bin/surge ./dist/ --domain https://c-arcane.surge.sh
+./node_modules/.bin/surge dist --domain https://c-arcane.surge.sh
 ```
 
 ### Deployed
 
 On [surge](https://surge.sh/).  [example](https://github.com/yavisht/deploy-via-surge.sh-github-action-template/tree/master)
+
+Surge need a fix on prod - thx https://medium.com/@ezplora/fix-direct-url-reload-errors-on-react-router-for-surge-sh-users-243624565742
