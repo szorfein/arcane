@@ -2,11 +2,21 @@
 </script>
 
 <template>
-    <v-app-bar :elevation="2">
-        <v-toolbar>
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar>
+         <template v-slot:prepend>
+             <v-app-bar-nav-icon />
+         </template>
 
-            <v-toolbar-title><RouterLink to="/">Arcane</RouterLink></v-toolbar-title>
-        </v-toolbar>
+         <v-app-bar-title><RouterLink to="/">Arcane</RouterLink></v-app-bar-title>
+
+         <nav>
+             <RouterLink to="/">Home</RouterLink>
+             <RouterLink to="/posts">/ Posts </RouterLink>
+             <RouterLink to="/about">/ About</RouterLink>
+         </nav>
+
+        <template v-slot:append>
+            <v-btn icon="mdi-dots-vertical"></v-btn>
+        </template>
     </v-app-bar>
 </template>

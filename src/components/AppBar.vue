@@ -1,6 +1,5 @@
 <template>
     <component :is="item_component" />
-    {{ item_component }}
 </template>
 
 <script setup>
