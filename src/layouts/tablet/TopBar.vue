@@ -2,7 +2,8 @@
     <v-navigation-drawer
         v-model="drawer"
         :rail="rail"
-        permanent>
+        permanent
+        style="position: fixed;">
         <v-list-item prepend-avatar="@/assets/logo-site.png" title="Arcane" nav @click="rail = !rail">
             <template v-slot:append>
                 <v-btn

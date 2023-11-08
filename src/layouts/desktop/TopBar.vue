@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <v-app-bar>
+    <v-app-bar style="position: fixed;">
          <template v-slot:prepend>
              <v-app-bar-nav-icon />
          </template>

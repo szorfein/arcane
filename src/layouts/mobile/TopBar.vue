@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <v-bottom-navigation mode="shift">
+    <v-bottom-navigation mode="shift" style="position: fixed;">
         <v-btn to="/">
             <v-icon>mdi-home-city</v-icon>
             <span>Home</span>
