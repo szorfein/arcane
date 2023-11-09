@@ -5,6 +5,8 @@ export const posts = reactive([
 {
   slug: "{{ page.title | slugify }}",
   title: "{{ page.title }}",
+  date: "{{ page.date }}",
+  description: "{{ page.extra.description }}",
   content: `{{ page.content | linebreaksbr | safe }}`,
 },
 {% endfor %}
