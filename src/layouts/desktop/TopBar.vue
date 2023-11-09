@@ -7,12 +7,12 @@
              <v-app-bar-nav-icon />
          </template>
 
-         <v-app-bar-title><RouterLink to="/">Arcane</RouterLink></v-app-bar-title>
+         <v-app-bar-title><RouterLink to="/" class="text-decoration-none">Arcane</RouterLink></v-app-bar-title>
 
          <nav>
-             <RouterLink to="/">Home</RouterLink>
-             <RouterLink to="/posts">/ Posts </RouterLink>
-             <RouterLink to="/about">/ About</RouterLink>
+             <RouterLink to="/" class="text-decoration-none">Home</RouterLink>
+             <RouterLink to="/posts" class="text-decoration-none">/ Posts </RouterLink>
+             <RouterLink to="/about" class="text-decoration-none">/ About</RouterLink>
          </nav>
 
         <template v-slot:append>
