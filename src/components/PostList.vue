@@ -1,6 +1,12 @@
 <template>
     <v-row>
-        <v-col cols="6" v-for="post in posts" :key="post.id">
+        <v-col
+            xs="12"
+            sm="6"
+            lg="4"
+            v-for="post in posts"
+            :key="post.date"
+        >
             <PostCard
                 :title="post.title"
                 :url="`/post/${ post.slug }`"

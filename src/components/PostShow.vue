@@ -9,7 +9,7 @@
 
      //const route = useRoute();
 
-     const post = computed(() => {
+ const post = computed(() => {
      //return posts.find(p => p.slug === route.params.title);
      return posts.find(p => p.slug === props.title);
  })
@@ -35,9 +35,39 @@
 </script>
 
 <template>
-    <div v-if="post">
-        <h1>{{ post_title }}</h1>
-        <div v-html="post_content"></div>
-    </div>
-    <div v-else>No post found {{ title }}</div>
+    <v-container>
+        <div v-if="post">
+            <h1 class="text-h2">{{ post_title }}</h1>
+            <div class="ma-6"></div>
+            <p class="font-weight-light">{{ post.date }}</p>
+            <div class="ma-6"></div>
+            <div v-html="post_content"></div>
+        </div>
+        <div v-else>No post found {{ title }}</div>
+    </v-container>
 </template>
+
+<style scoped>
+ pre {
+     padding: 1rem;
+     overflow: auto;
+ }
+ pre[data-linenos] {
+     padding: 1rem 0;
+ }
+ pre table td {
+     padding: 0;
+ }
+ pre table td:nth-of-type(1) {
+     text-align: center;
+     user-select: none;
+ }
+ pre mark {
+     display: block;
+     background-color: rgba(254, 252, 232, 0.9);
+ }
+ pre table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+</style>
