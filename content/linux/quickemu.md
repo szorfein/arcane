@@ -1,6 +1,9 @@
 +++
 title = "Quickemu"
 date = 2023-11-05
+
+[extra]
+description = "Replace Oracle Virtualbox by QuickEmu"
 +++
 Use Quickemu in order to replace Virtualbox.
 

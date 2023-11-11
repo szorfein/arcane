@@ -3,6 +3,10 @@
 </script>
 
 <template>
-    <h1>Displaying posts</h1>
-    <PostList />
+    <v-container>
+        <h1 class="text-h4">Posts</h1>
+        <div class="ma-6"></div>
+
+        <PostList />
+    </v-container>
 </template>
