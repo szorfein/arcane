@@ -1,7 +1,7 @@
 <script setup>
  import { computed } from 'vue';
 // import { useRoute } from 'vue-router';
- import { posts } from '@/zola/posts_linux.js'
+ import { posts } from '@/zola-stores/posts_linux.js'
 
  const props = defineProps({
      title: String
@@ -9,7 +9,7 @@
 
      //const route = useRoute();
 
-     const post = computed(() => {
+ const post = computed(() => {
      //return posts.find(p => p.slug === route.params.title);
      return posts.find(p => p.slug === props.title);
  })

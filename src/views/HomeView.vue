@@ -1,9 +1,11 @@
 <script setup>
  import HeadBanner from '../components/HeadBanner.vue'
- import TheWelcome from '../components/TheWelcome.vue'
+ import AllPosts from '../components/AllPosts.vue'
 </script>
 
 <template>
   <HeadBanner />
-  <TheWelcome />
+  <v-container>
+      <AllPosts />
+  </v-container>
 </template>
