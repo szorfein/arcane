@@ -5,8 +5,11 @@ export const posts = reactive([
 { posts: [
 {% for post in section.pages %}
 {
-  slug: "{{ post.title | slugify }}",
-  title: "{{ post.title }}",
+slug: "{{ post.title | slugify }}",
+title: "{{ post.title }}",
+date: "{{ post.date }}",
+description: "{{ post.extra.description }}",
+content: `{{ post.content | linebreaksbr | safe }}`,
 },
 {% endfor %}
 ]},
