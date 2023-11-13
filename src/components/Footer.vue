@@ -1,5 +1,5 @@
 <template>
-    <v-footer>
+    <v-footer class="dbg">
         <div class="px-4 py-2 text-center w-100">
             {{ new Date().getFullYear() }} — <strong>Arcane</strong>
         </div>

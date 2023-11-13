@@ -3,7 +3,8 @@
         v-model="drawer"
         :rail="rail"
         permanent
-        style="position: fixed;">
+        style="position: fixed;"
+        class="dbg">
         <v-list-item prepend-avatar="@/assets/logo-site.png" title="Arcane" nav @click="rail = !rail">
             <template v-slot:append>
                 <v-btn
@@ -16,8 +17,7 @@
 
         <v-divider></v-divider>
 
-        <v-list density="compact" nav :items="items">
-        </v-list>
+        <v-list density="compact" nav :items="items"></v-list>
     </v-navigation-drawer>
 </template>
 
