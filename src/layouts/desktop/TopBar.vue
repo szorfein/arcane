@@ -7,8 +7,11 @@
 </script>
 
 <template>
-    <v-navigation-drawer width="244">
-        <h4 class="text-h4 ma-5">Arcane</h4>
+    <v-navigation-drawer width="244" class="h-100" style="position: fixed;">
+        <h4 class="text-h4 ma-8">Arcane</h4>
+
+        <v-divider></v-divider>
+
         <nav>
             <v-list :items="items" nav></v-list>
         </nav>
