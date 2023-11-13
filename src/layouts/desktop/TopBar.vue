@@ -1,22 +1,16 @@
 <script setup>
+ const items = [
+     { title: 'Home', props: { to: '/', color: 'primary', prependIcon: 'mdi-home' }},
+     { title: 'Posts', props: { to: '/posts', color: 'primary', prependIcon: 'mdi-post' }},
+     { title: 'About', props: { to: '/about', color: 'primary', prependIcon: 'mdi-account' }},
+ ]
 </script>
 
 <template>
-    <v-app-bar style="position: fixed;">
-         <template v-slot:prepend>
-             <v-app-bar-nav-icon />
-         </template>
-
-         <v-app-bar-title><RouterLink to="/" class="text-decoration-none">Arcane</RouterLink></v-app-bar-title>
-
-         <nav>
-             <RouterLink to="/" class="text-decoration-none">Home</RouterLink>
-             <RouterLink to="/posts" class="text-decoration-none">/ Posts </RouterLink>
-             <RouterLink to="/about" class="text-decoration-none">/ About</RouterLink>
-         </nav>
-
-        <template v-slot:append>
-            <v-btn icon="mdi-dots-vertical"></v-btn>
-        </template>
-    </v-app-bar>
+    <v-navigation-drawer width="244">
+        <h4 class="text-h4 ma-5">Arcane</h4>
+        <nav>
+            <v-list :items="items" nav></v-list>
+        </nav>
+    </v-navigation-drawer>
 </template>
