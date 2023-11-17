@@ -71,3 +71,22 @@
      border-collapse: collapse;
  }
 </style>
+
+<style>
+ pre[class^='language'] {
+     background: rgb(var(--v-theme-surface));
+     border-style: solid;
+     border-width: 0;
+     border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+     color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+     padding: 16px 16px 16px 16px;
+     padding-inline-end: 48px !important;
+     overflow: hidden;
+     white-space: pre-wrap;
+     word-break: normal;
+     word-spacing: normal;
+     word-wrap: normal;
+     line-height: 1.5;
+     border-radius: 4px;
+ }
+</style>

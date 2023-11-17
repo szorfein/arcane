@@ -2,7 +2,7 @@
     <v-card :to="url" variant="flat" rounded="lg">
         <template v-slot:item>
             {{ date }}
-            <v-btn :to="`/tag/${ tags }`" variant="text">{{ tags }}</v-btn>
+            <v-btn :to="`/tag/${ tags }`" variant="text" class="text-primary">{{ tags }}</v-btn>
             <h5 class="text-h4 mt-4 mb-3">{{ title }}</h5>
         </template>
         <template v-slot:subtitle>
