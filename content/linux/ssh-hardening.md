@@ -3,13 +3,14 @@ title = "Ssh hardening"
 date = 2023-11-17
 
 [taxonomies]
+tag = ["security"]
 
 [extra]
 description = "Enhance security of SSH by configuring it."
 +++
 
 ## Create a new group
-To fine tunning ssh, we only want to allow few local users to run ssh.
+To fine tunning ssh, we only want to allow few local users to use ssh.
 
 ```sh
 # groupadd ssh-user
@@ -18,7 +19,12 @@ To fine tunning ssh, we only want to allow few local users to run ssh.
 
 ## sshd_config
 
+Edit file /etc/ssh/sshd_config
+
 ```py
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+
 AllowGroups ssh-user
 
 ClientAliveCountMax 2
@@ -50,6 +56,8 @@ X11Forwarding no # default
 ```
 
 ## ssh_config
+
+Edit file /etc/ssh/ssh_config
 
 ```py
 Host github.com

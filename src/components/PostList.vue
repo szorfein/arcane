@@ -11,6 +11,7 @@
                 :title="post.title"
                 :url="`/post/${ post.slug }`"
                 :date="post.date"
+                :tags="post.tags"
                 :description="post.description"
             />
         </v-col>
@@ -19,5 +20,5 @@
 
 <script setup>
  import { posts } from '@/zola-stores/posts_linux.js'
- import PostCard from './PostCard.vue'
+ import PostCard from './card/post.vue'
 </script>

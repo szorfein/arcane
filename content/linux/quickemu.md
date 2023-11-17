@@ -2,6 +2,9 @@
 title = "Quickemu"
 date = 2023-11-05
 
+[taxonomies]
+tag = ["virtualization"]
+
 [extra]
 description = "Replace Oracle Virtualbox by QuickEmu"
 +++
