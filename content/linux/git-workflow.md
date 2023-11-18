@@ -2,6 +2,9 @@
 title= "Git Workflow"
 date = 2023-11-10
 
+[taxonomies]
+tag = ["git"]
+
 [extra]
 description = "Optimise your git workflow."
 +++

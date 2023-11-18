@@ -3,11 +3,12 @@ import { reactive } from 'vue';
 export const posts = reactive([
 {% for page in section.pages %}
 {
-  slug: "{{ page.title | slugify }}",
-  title: "{{ page.title }}",
-  date: "{{ page.date }}",
-  description: "{{ page.extra.description }}",
-  content: `{{ page.content | linebreaksbr | safe }}`,
+slug: "{{ page.title | slugify }}",
+title: "{{ page.title }}",
+date: "{{ page.date }}",
+tags: "{{ page.taxonomies.tag[0] | slugify }}",
+description: "{{ page.extra.description }}",
+content: `{{ page.content | linebreaksbr | safe }}`,
 },
 {% endfor %}
 ])

@@ -8,6 +8,7 @@ export const posts = reactive([
 slug: "{{ post.title | slugify }}",
 title: "{{ post.title }}",
 date: "{{ post.date }}",
+tags: "{{ post.taxonomies.tag[0] | slugify }}",
 description: "{{ post.extra.description }}",
 content: `{{ post.content | linebreaksbr | safe }}`,
 },
