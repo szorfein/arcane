@@ -3,7 +3,8 @@
         v-model="drawer"
         :rail="rail"
         permanent
-        style="position: fixed;">
+        style="position: fixed;"
+        class="dbg">
         <v-list-item prepend-avatar="@/assets/logo-site.png" title="Arcane" nav @click="rail = !rail">
             <template v-slot:append>
                 <v-btn
@@ -16,14 +17,7 @@
 
         <v-divider></v-divider>
 
-        <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-home-city" title="Home" value="home" to="/">
-          </v-list-item>
-          <v-list-item prepend-icon="mdi-post" title="Posts" value="posts" to="/posts">
-          </v-list-item>
-          <v-list-item prepend-icon="mdi-account" title="About" value="about" to="/about">
-          </v-list-item>
-        </v-list>
+        <v-list density="compact" nav :items="items"></v-list>
     </v-navigation-drawer>
 </template>
 
@@ -31,15 +25,9 @@
  import { ref  } from 'vue'
  const drawer = ref(true)
  const rail = ref(true)
-</script>
-
-<script>
- export default {
-     data () {
-         return {
-             drawer: true,
-             rail: true,
-         }
-     }
- }
+ const items = [
+     { title: 'Home', props: { to: '/', color: 'primary', prependIcon: 'mdi-home' }},
+     { title: 'Posts', props: { to: '/posts', color: 'primary', prependIcon: 'mdi-post' }},
+     { title: 'About', props: { to: '/about', color: 'primary', prependIcon: 'mdi-account' }},
+ ]
 </script>
