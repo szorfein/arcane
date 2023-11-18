@@ -14,7 +14,8 @@
  const item_component = computed(() => {
      switch (name.value) {
          case 'xs': return TopBarMobile
-         case 'sm' || 'md': return TopBarTablet
+         case 'sm': return TopBarTablet
+         case 'md': return TopBarTablet
          case 'lg' || 'xl' || 'xxl': return TopBarDesktop
      }
      // default
