@@ -41,7 +41,7 @@
             <div class="ma-6"></div>
             <p class="font-weight-light">{{ post.date }}</p>
             <div class="ma-6"></div>
-            <div v-html="post_content"></div>
+            <div class="markdown" v-html="post_content"></div>
         </div>
         <div v-else>No post found {{ title }}</div>
     </v-container>
@@ -88,5 +88,19 @@
      word-wrap: normal;
      line-height: 1.5;
      border-radius: 4px;
+ }
+ .markdown ul>li {
+     display: grid;
+     grid-template-areas: "prepend content append";
+     grid-template-columns: max-content 1fr auto;
+     min-height: 30px;
+     align-items: center;
+     padding: 4px 16px;
+     text-decoration: none;
+     word-break: normal;
+     word-wrap: break-word;
+     text-overflow: ellipsis;
+     hyphens: auto;
+     text-transform: none;
  }
 </style>
