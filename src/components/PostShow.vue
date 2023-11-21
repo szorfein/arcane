@@ -2,6 +2,7 @@
  import { computed } from 'vue';
 // import { useRoute } from 'vue-router';
  import { posts } from '@/zola-stores/posts_linux.js'
+ import ToolBar from './ToolBar.vue'
 
  const props = defineProps({
      title: String
@@ -35,6 +36,7 @@
 </script>
 
 <template>
+    <ToolBar />
     <v-container>
         <div v-if="post">
             <h1 class="text-h2">{{ post_title }}</h1>
