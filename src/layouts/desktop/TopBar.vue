@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <v-navigation-drawer width="244" class="h-100 dbg" style="position: fixed;">
+    <v-navigation-drawer width="224" class="h-100 dbg" style="position: fixed;">
         <h4 class="text-h4 ma-8">Arcane</h4>
 
         <v-divider></v-divider>

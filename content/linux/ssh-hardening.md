@@ -26,7 +26,11 @@ HostKey /etc/ssh/ssh_host_ed25519_key
 HostKey /etc/ssh/ssh_host_rsa_key
 
 AllowGroups ssh-user
+```
 
+Options recommended by the audit tool lynis.
+
+```config
 ClientAliveCountMax 2
 ClientAliveInternal 0
 FingerprintHash sha256 # default
@@ -34,14 +38,9 @@ LoginGraceTime 120 # default
 LogLevel VERBOSE
 MaxAuthTries 3
 MaxSessions 2
-
-KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
-Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
-MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128-etm@openssh.com
-HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa
 ```
 
-### Feature to disable
+Few things to disable.
 
 ```config
 AllowAgentForwarding no
@@ -55,9 +54,18 @@ TCPKeepAlive no
 X11Forwarding no # default
 ```
 
+Force to use only strong algorithms.
+
+```config
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128-etm@openssh.com
+HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa
+```
+
 ## ssh_config
 
-Edit file /etc/ssh/ssh_config
+Edit file /etc/ssh/ssh_config. Options for Github.
 
 ```config
 Host github.com
@@ -66,7 +74,7 @@ Host github.com
   MACs hmac-sha2-256,hmac-sha2-512,hmac-sha1
 ```
 
-Configure your host to allow only strong algorithms.
+Tell ssh to use only algorithms supported by our server.
 
 ```config
 Host *
@@ -76,7 +84,7 @@ Host *
 ```
 
 ## Create keys
-Server side, we generate new keypair. Also delete poor keypair like `/etc/ssh/ssh_host_ecdsa_key`:
+Server side, we generate new keypair. Also delete poor keypair present like `/etc/ssh/ssh_host_ecdsa_key`:
 
 ```sh
 cd /etc/ssh
