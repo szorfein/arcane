@@ -5,7 +5,7 @@
 
 <template>
   <HeadBanner />
-  <v-container>
+  <v-container fluid>
       <RecentPosts />
   </v-container>
 </template>
