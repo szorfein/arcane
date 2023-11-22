@@ -2,6 +2,7 @@
  import { computed } from 'vue';
 // import { useRoute } from 'vue-router';
  import { posts } from '@/zola-stores/posts_linux.js'
+ import ToolBar from './ToolBar.vue'
 
  const props = defineProps({
      title: String
@@ -35,16 +36,19 @@
 </script>
 
 <template>
-    <v-container>
-        <div v-if="post">
-            <h1 class="text-h2">{{ post_title }}</h1>
-            <div class="ma-6"></div>
-            <p class="font-weight-light">{{ post.date }}</p>
-            <div class="ma-6"></div>
-            <div class="markdown" v-html="post_content"></div>
-        </div>
-        <div v-else>No post found {{ title }}</div>
-    </v-container>
+    <div v-if="post">
+        <ToolBar :tag="post.tags" />
+        <v-container>
+            <div class="text-h2 mb-8 pt-4 font-weight-regular">
+                {{ post_title }}
+            </div>
+            <div class="mt-6 mb-8 text-subtitle-1">
+                {{ post.date }}
+            </div>
+            <div class="markdown text-body-1" v-html="post_content"></div>
+        </v-container>
+    </div>
+    <div v-else>No post found {{ title }}</div>
 </template>
 
 <style scoped>
