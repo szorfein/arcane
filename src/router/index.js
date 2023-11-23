@@ -25,7 +25,7 @@ const router = createRouter({
     {
       path: '/tag/:name',
       name: 'tag',
-      component: () => import('@/components/Tag.vue'),
+      component: () => import('@/views/Tag.vue'),
       props: true,
       async beforeEnter(to, from, next) {
         if (to.params && to.params.name) {
