@@ -1,0 +1,7 @@
+const tags = [
+{% for category in terms %}
+    '{{ category.name }}',
+{% endfor %}
+]
+
+export default tags;

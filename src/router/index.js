@@ -23,6 +23,25 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/tag/:name',
+      name: 'tag',
+      component: () => import('@/components/Tag.vue'),
+      props: true,
+      async beforeEnter(to, from, next) {
+        if (to.params && to.params.name) {
+          const name = to.params.name;
+          const module = await import ('@/zola-stores/all-tags.js');
+          const tags = module.default;
+
+          if (tags.includes(name)) {
+            to.params.tag = name;
+          }
+        }
+        to.params.from = from;
+        next()
+      },
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
