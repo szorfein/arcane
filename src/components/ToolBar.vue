@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar>
+    <v-toolbar color="surface">
         <v-btn icon @click="$router.back()">
             <v-icon>mdi-arrow-left</v-icon>
         </v-btn>
